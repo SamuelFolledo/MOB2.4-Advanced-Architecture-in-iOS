@@ -15,10 +15,13 @@ Students by the end of the course will be able to …
 
 ## Schedule
 ### 1. Creational Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/01-Creational-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/02-Creational-PatternsPt.2/README) *2021/01/20*
-- 
+- [**Singleton Pattern** Playground]()
+- [**Object Template Pattern** Playground]()
+- [**Factory Method** Playground]()
+- [**Builder Pattern** Playground]()
 
 ### 2. Behavioral Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/03-Behavioral-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/04-Behavioral-PatternsPt.2/README) *2021/01/25*
-- 
+- [****]()
 
 ### 3. Structural Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/05-Structural-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/06-Structural-PatternsPt.2/README) *2021/01/27*
-- 
+- [****]()
