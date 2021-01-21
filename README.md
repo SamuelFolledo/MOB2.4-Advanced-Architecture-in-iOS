@@ -14,11 +14,13 @@ Students by the end of the course will be able to …
 - [Swift Patterns Cheat Sheet](https://docs.google.com/document/d/1I7dZ4qk_FJviZyDEKz7qTCIgQevZMV0zW1rz5cBLUMU/edit?usp=sharing)
 
 ## Schedule
+
 ### 1. Creational Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/01-Creational-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/02-Creational-PatternsPt.2/README) *2021/01/20*
-- [**Singleton Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Singleton%20Pattern.xcplaygroundpage)
-- [**Object Template Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Object%20Template%20Pattern.xcplaygroundpage)
-- [**Factory Method** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Factory%20Method.xcplaygroundpage)
-- [**Builder Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Builder%20Pattern.xcplaygroundpage)
+
+- [**Singleton Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Singleton%20Pattern.xcplaygroundpage/Contents.swift)
+- [**Object Template Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Object%20Template%20Pattern.xcplaygroundpage/Contents.swift)
+- [**Factory Method** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Factory%20Method.xcplaygroundpage/Contents.swift)
+- [**Builder Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Builder%20Pattern.xcplaygroundpage/Contents.swift)
 
 ### 2. Behavioral Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/03-Behavioral-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/04-Behavioral-PatternsPt.2/README) *2021/01/25*
 - [****]()
