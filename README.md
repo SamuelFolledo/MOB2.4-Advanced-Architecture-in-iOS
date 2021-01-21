@@ -15,10 +15,10 @@ Students by the end of the course will be able to …
 
 ## Schedule
 ### 1. Creational Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/01-Creational-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/02-Creational-PatternsPt.2/README) *2021/01/20*
-- [**Singleton Pattern** Playground]()
-- [**Object Template Pattern** Playground]()
-- [**Factory Method** Playground]()
-- [**Builder Pattern** Playground]()
+- [**Singleton Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Singleton%20Pattern.xcplaygroundpage)
+- [**Object Template Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Object%20Template%20Pattern.xcplaygroundpage)
+- [**Factory Method** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Factory%20Method.xcplaygroundpage)
+- [**Builder Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Builder%20Pattern.xcplaygroundpage)
 
 ### 2. Behavioral Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/03-Behavioral-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/04-Behavioral-PatternsPt.2/README) *2021/01/25*
 - [****]()
