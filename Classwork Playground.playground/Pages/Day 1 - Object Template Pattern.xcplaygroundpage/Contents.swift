@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 
 /*:
- # Object Template
+ # [Object Template Acivity](https://github.com/Make-School-Courses/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/blob/master/Lessons/01-Creational-PatternsPt.1/assignments/template.md)
  ## In Pairs
  The following code sets up an array of tuples each representing a specific product:
  */

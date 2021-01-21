@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true'>
     <pages>
-        <page name='Untitled Page'/>
-        <page name='Day 1 - Singleton'/>
-        <page name='Day 1 - Object Template'/>
-        <page name='Day 1 - Factory Pattern'/>
+        <page name='MyViewController'/>
+        <page name='Day 1 - Singleton Pattern'/>
+        <page name='Day 1 - Object Template Pattern'/>
+        <page name='Day 1 - Factory Method'/>
+        <page name='Day 1 - Builder Pattern'/>
     </pages>
 </playground>

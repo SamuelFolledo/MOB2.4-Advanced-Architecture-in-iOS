@@ -1,5 +1,9 @@
 //: [Previous](@previous)
 
+/*:
+ # [Singleton Pattern Activity](https://github.com/Make-School-Courses/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/blob/master/Lessons/01-Creational-PatternsPt.1/assignments/singleton.md)
+ */
+
 import UIKit
 
 class DataSourcePatterns {
