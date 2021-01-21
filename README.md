@@ -25,3 +25,8 @@ Students by the end of the course will be able to …
 
 ### 3. Structural Patterns [part 1](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/05-Structural-PatternsPt.1/README) and [part 2](https://make-school-courses.github.io/MOB-2.4-Advanced-Architectural-Patterns-in-iOS/#/Lessons/06-Structural-PatternsPt.2/README) *2021/01/27*
 - [****]()
+
+## Contact
+- If you have any question, feel free to contact me via email: <samuelfolledo@gmail.com>
+- Follow me at [LinkedIn](https://linkedin.com/in/samuelfolledo) or read my articles at [Medium](https://medium.com/@samuelfolledo)
+- Check out my Make School [portfolio](https://www.makeschool.com/portfolio/samuelfolledo)
