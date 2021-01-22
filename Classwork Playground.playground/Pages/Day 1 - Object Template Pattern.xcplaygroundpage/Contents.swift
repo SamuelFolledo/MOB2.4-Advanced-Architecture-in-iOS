@@ -27,7 +27,7 @@ func calculateStockValue(tuples:[(String, String, Double, Int)]) -> Double {
 print("Sales tax for Kayak: $\(calculateTax(product: products[0]))")
 print("Total value of stock: $\(calculateStockValue(tuples: products))")
 
-/*
+/*:
  Q: If we remove an element from each of the tuples, how will that effect the rest of the code?
  A: You would have to change lots of code everywhere, making it hard to maintain
  
@@ -44,10 +44,47 @@ print("Total value of stock: $\(calculateStockValue(tuples: products))")
 
 
 
-/*
+/*:
  3. Analyze and discuss with your partner the various places in the code which must now be rewritten to accommodate this change to the product tuples.
  - Also discuss what this reveals regarding the impact of tuples on extending and maintaining code.
+ - **Tuples itself is really hard to maintain unless we know for sure its properties will not change**
  4. Now, validate your analysis by applying your proposed fixes to the code in the playground (each person should do this separately in their own playground)
+ - **Turning tuple into its own `class` or `struct` can help improve this code**
  */
+
+struct Product {
+    var name: String
+    var description: String
+    var price: Double
+    var stock: Int
+    
+    init(name: String = "", description: String = "", price: Double = 0.0, stock: Int = 0) {
+        self.name = name
+        self.description = description
+        self.price = price
+        self.stock = stock
+    }
+}
+
+var updatedProducts: [Product] = [
+    Product(name: "Kayak", description: "A boat for one person", price: 275.0, stock: 10),
+    Product(name: "Lifejacket", description: "Protective and fashionable", price: 48.95, stock: 14),
+    Product(name: "Lifejacket", description: "FIFA-approved size and weight", price: 19.5, stock: 32),
+]
+
+func updatedCalculateTax(product: Product) -> Double {
+   return product.price * 0.2;
+}
+
+func updatedCalculateStockValue(products: [Product]) -> Double {
+   return products.reduce(0, {
+       (total, product) -> Double in
+       return total + (product.price * Double(product.stock))
+   })
+}
+
+print("Sales tax for Kayak: $\(updatedCalculateTax(product: updatedProducts[0]))")
+print("Total value of stock: $\(updatedCalculateStockValue(products: updatedProducts))")
+
 
 //: [Next](@next)
