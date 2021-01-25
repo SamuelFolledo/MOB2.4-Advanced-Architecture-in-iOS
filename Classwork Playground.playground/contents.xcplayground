@@ -6,5 +6,7 @@
         <page name='Day 1 - Object Template Pattern'/>
         <page name='Day 1 - Factory Method'/>
         <page name='Day 1 - Builder Pattern'/>
+        <page name='Day 2 - Chain of Responsibility'/>
+        <page name='Day 2 - CoR part 2'/>
     </pages>
 </playground>
