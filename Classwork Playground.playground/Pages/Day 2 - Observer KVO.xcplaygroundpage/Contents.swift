@@ -13,9 +13,11 @@ import Foundation
  
     `@objc dynamic`
  2. Your Observer class needs this specific init() function:
+ 3. Observer and Subject **must be a `class`**
+ 4. No need to remove observers as if the reference is removed, the **observer is automatically removed in KVO**.
  */
 
-import Foundation;
+import Foundation
 
 /* Step 1: Create a Subject class and Annotate a Property for Key-Value Observing */
 

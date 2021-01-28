@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true'>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true'>
     <pages>
         <page name='MyViewController'/>
         <page name='Day 1 - Singleton Pattern'/>
@@ -12,5 +12,7 @@
         <page name='Day 2 - Observer Example'/>
         <page name='Day 2 - Observer KVO'/>
         <page name='Day 2 - Observer KVO - Apple&apos;s Way'/>
+        <page name='Day 3 - Adapter Exampel'/>
+        <page name='Day 3 - Adapter Activity'/>
     </pages>
 </playground>
