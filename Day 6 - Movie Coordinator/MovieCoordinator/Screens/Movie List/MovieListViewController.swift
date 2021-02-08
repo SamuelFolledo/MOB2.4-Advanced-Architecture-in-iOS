@@ -10,6 +10,7 @@ import UIKit
 
 class MovieListViewController: UICollectionViewController {
     
+    weak var delegate: MovieListViewControllerDelegate?
     var movies: [Movie] = Movie.dummyMovies
     
     init() {
@@ -55,7 +56,9 @@ class MovieListViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "showDetail", sender: indexPath)
+//        self.performSegue(withIdentifier: "showDetail", sender: indexPath)
+        let movie = movies[indexPath.item]
+        delegate?.movieListViewController(self, didSelect: movie)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
