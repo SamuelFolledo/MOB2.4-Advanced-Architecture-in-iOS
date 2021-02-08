@@ -26,16 +26,24 @@ class ProductSubject: NSObject {
     @objc dynamic var counter = 0
 }
 
+class NameSubject: NSObject {
+    @objc dynamic var name = "Samuel"
+}
+
 /* Step 2: Define an Observer class */
 class Observer: NSObject {
 
     @objc var subject: ProductSubject
+    @objc var name: NameSubject
     
     //TODO: Add init()
-    init(subject: ProductSubject) {
+    init(subject: ProductSubject, name: NameSubject) {
         self.subject = subject
+        self.name = name
         super.init()
         subject.addObserver(self, forKeyPath: "counter",
+                                    options: NSKeyValueObservingOptions.new, context: nil)
+        name.addObserver(self, forKeyPath: "name",
                                     options: NSKeyValueObservingOptions.new, context: nil)
     }
 
@@ -45,11 +53,25 @@ class Observer: NSObject {
 }
 /* Step 3: Associate the Observer with the Property to Observe */
 let subject = ProductSubject()
-let observer = Observer(subject: subject)
+let name = NameSubject()
+let observer = Observer(subject: subject, name: name)
 
 /* Step 4: Respond to a Property Change */
 subject.counter += 11
 subject.counter = 99
+
+name.name = "Kobe"
+print()
+let newObserver = observer
+print()
+print(newObserver.name.name)
+observer.name.name = "MJ"
+print()
+print(newObserver.name.name)
+print()
+print()
+newObserver.name.name = "Kobe again"
+print("obs = ", observer.name.name)
 
 /* RESULTS - Should print:
 Notification: Optional("counter") = Optional(11)
