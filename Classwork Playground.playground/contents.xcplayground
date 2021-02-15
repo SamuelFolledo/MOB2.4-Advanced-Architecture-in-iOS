@@ -15,5 +15,7 @@
         <page name='Day 3 - Adapter Exampel'/>
         <page name='Day 3 - Adapter Activity'/>
         <page name='Day 7 - Declarative - Functional Programming'/>
+        <page name='Playground - Date'/>
+        <page name='Playground - Map, FlatMap, CompactMap'/>
     </pages>
 </playground>
