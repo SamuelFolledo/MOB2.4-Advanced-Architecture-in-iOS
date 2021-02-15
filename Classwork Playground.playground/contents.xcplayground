@@ -17,5 +17,8 @@
         <page name='Day 7 - Declarative - Functional Programming'/>
         <page name='Playground - Date'/>
         <page name='Playground - Map, FlatMap, CompactMap'/>
+        <page name='Day 8 - Map (Functional Programming)'/>
+        <page name='Day 8 - FlatMap (Functional Programming)'/>
+        <page name='Day 8 - CompactMap (Functional Programming)'/>
     </pages>
 </playground>
