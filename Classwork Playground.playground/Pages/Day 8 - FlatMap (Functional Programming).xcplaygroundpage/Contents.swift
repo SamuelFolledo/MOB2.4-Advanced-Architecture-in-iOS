@@ -14,6 +14,7 @@ let url = path.map { (string: String) -> URL? in
 }
 print(url)
 //: What happened? How can you explain it? Write your answer in a comment and talk about how you would safely access the url.
+//It transformed the string and create a URL from it
 
 
 //: Here's an alternative you can do to remove the nesting of optionals using flatmap
