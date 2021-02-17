@@ -38,8 +38,15 @@ let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 let result = numbers.flatMap({ $0 })
 print(result)
 //: Now take the following and return an array with the tallest giraffes
+//get the biggest number from each array
+
 let giraffes = [[5, 6, 9], [11, 2, 13, 20], [1, 13, 7, 8, 2]]
 
+var tallestGiraffes = giraffes.map {
+    return $0.max()
+}.flatMap {$0}
+
+print(tallestGiraffes)
 //: #### Exploring combinations
 /*:
 We can combine `flatMap` and  `map` to create powerful transformations. Let's say we need to create a deck of cards
@@ -54,6 +61,13 @@ var deckOfCards = suits.flatMap { suit in
 }
 deckOfCards.shuffle()
 print(deckOfCards)
+
+let deckOfCards2 = faces.flatMap { face in
+    suits.map { suit in
+        (suit, face)
+    }
+}
+print("\nDeck of cards 2: \(deckOfCards2)")
 //: #### Exercise 3
 /*:
 Write a function that duplicates each value inside an array. See if you can use map or flatMap for this.
@@ -61,6 +75,14 @@ Write a function that duplicates each value inside an array. See if you can use 
 For example `[1,2,3]` turns into `[1, 1, 2, 2, 3, 3]` and `[["a", "b"],["c", "d"]]`, turns into `[["a", "b"], ["a", "b"], ["c", "d"], ["c", "d"]]`
 */
 
+let nums = [1, 2, 3]
+let letters = [["a", "b"],["c", "d"]]
 
+func duplicates<T>(values: [T]) -> [T] {
+//    values.map({ [$0, $0] }).flatMap({$0})
+    values.flatMap{ [$0, $0] }
+}
+
+print(duplicates(values: nums))
 
 //: [Next](@next)

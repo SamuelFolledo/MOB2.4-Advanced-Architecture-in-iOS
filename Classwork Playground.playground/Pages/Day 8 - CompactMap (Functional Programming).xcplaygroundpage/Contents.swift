@@ -20,6 +20,26 @@ print(result) // [5, 42, 100]
 Create a function that removes all vowels from a string. Use compactMap
 */
 
+let vowels: [Character] = ["a", "e", "i", "o", "u"]
+
+let myName = "Samuel"
+let filteredName = myName.compactMap { vowels.contains($0) ? nil : String($0) }.joined()
+print(filteredName)
+
+func removeVowels(word: String) -> String {
+    word.compactMap { vowels.contains($0) ? nil : String($0) }.joined()
+}
+print(removeVowels(word: "Kobe"))
+
+func removeVowels2(word: String) -> String {
+    String(word.compactMap { char -> Character? in
+        switch char {
+        case "a", "e", "i", "o", "u": return nil
+        default: return char
+        }
+    })
+}
+print(removeVowels2(word: "Kobe"))
 
 //: #### Exercise 2
 /*:
@@ -30,6 +50,9 @@ Expected result:
 `[2, 4, 6, 8, 12, 14, 16, 18, 22, 24, 26, 28]`
 */
 
-
+let sequence = stride(from: 0, to: 100, by: 2).compactMap{ int in
+    return int % 10 == 0 ? nil : int
+}
+print(sequence)
 
 //: [Next](@next)
