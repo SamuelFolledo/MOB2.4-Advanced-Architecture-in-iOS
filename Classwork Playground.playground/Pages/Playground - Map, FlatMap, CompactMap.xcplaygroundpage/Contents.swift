@@ -26,4 +26,12 @@ let arrayOfIntegers4 = [[1, 3, 5, nil], [2, nil, 6]]
 let arrayOfStrings4 = arrayOfIntegers4.flatMap { $0 }.compactMap { $0 }
 
 print(arrayOfStrings4) // Prints [1, 3, 5, 2, 6]
+
+
+let mainArray = ["one", "two", "three", "three", "three", "four", "five"]
+let miniArray = ["two", "three"]
+let leftOvers = mainArray.filter( {miniArray.contains($0) == false} )
+print(leftOvers)
+
+
 //: [Next](@next)
