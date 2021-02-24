@@ -20,5 +20,11 @@
         <page name='Day 8 - Map (Functional Programming)'/>
         <page name='Day 8 - FlatMap (Functional Programming)'/>
         <page name='Day 8 - CompactMap (Functional Programming)'/>
+        <page name='Day 10 - Publishers (Combine pt 1)'/>
+        <page name='Day 11 - PassThroughSubject - Subjects (Combine pt 2)'/>
+        <page name='Day 11 - Blackjack Card Dealer'/>
+        <page name='Day 10 - Sink Subscribers (Combine pt 1)'/>
+        <page name='Day 10 - Assign Subscribers (Combine pt 1)'/>
+        <page name='Day 11 - CurrentValueSubject - Subjects (Combine pt 2)'/>
     </pages>
 </playground>
