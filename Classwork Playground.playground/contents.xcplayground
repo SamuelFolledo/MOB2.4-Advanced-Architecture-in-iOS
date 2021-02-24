@@ -22,9 +22,12 @@
         <page name='Day 8 - CompactMap (Functional Programming)'/>
         <page name='Day 10 - Publishers (Combine pt 1)'/>
         <page name='Day 11 - PassThroughSubject - Subjects (Combine pt 2)'/>
-        <page name='Day 11 - Blackjack Card Dealer'/>
+        <page name='Day 11 - Blackjack Card Dealer - Challenge'/>
         <page name='Day 10 - Sink Subscribers (Combine pt 1)'/>
         <page name='Day 10 - Assign Subscribers (Combine pt 1)'/>
         <page name='Day 11 - CurrentValueSubject - Subjects (Combine pt 2)'/>
+        <page name='Day 11 - Operators'/>
+        <page name='Day 11 - Operators Challenge 1'/>
+        <page name='Day 11 - Operators Challenge 2'/>
     </pages>
 </playground>
