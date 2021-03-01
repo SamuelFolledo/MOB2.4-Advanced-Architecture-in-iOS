@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Day 12 - Combine Form
+//  CombineForm
 //
-//  Created by Samuel Folledo on 3/1/21.
+//  Created by Adriana González Martínez on 2/21/21.
 //
 
 import UIKit
