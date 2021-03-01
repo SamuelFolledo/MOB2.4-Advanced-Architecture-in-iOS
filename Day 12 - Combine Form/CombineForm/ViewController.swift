@@ -10,11 +10,67 @@ import Combine
 
 class ViewController: UIViewController {
     
+    @Published var emailValue: String = ""
+    @Published var passwordValue: String = ""
+    @Published var confirmPassValue: String = ""
+    
+    //MARK: Publishers
+    
+    ///This publisher will be attached to emailValue and whenever it changes it will evaluate if the text has at least 3 characters. If not, it will display the warning message. The return value will be the string with the validated email.
+    var validatedEmail: AnyPublisher<String?, Never> {
+        return $emailValue.map { emailValue in
+            guard emailValue.count > 2 else {
+                DispatchQueue.main.async {
+                    self.emailWarning.isHidden = false
+                }
+                return nil
+            }
+            self.emailWarning.isHidden = true
+            return emailValue
+        }.eraseToAnyPublisher()
+    }
+    
+    ///This publisher will be attached to passwordValue and confirmPassValue whenever one of them changes it will evaluate if the text in both textfields match and if the password is at least 5 characters. If not, it will display the warning message. The return value will be the string with the validated password.
+    var validatedPassword: AnyPublisher<String?, Never> {
+        return Publishers.CombineLatest($passwordValue, $confirmPassValue)
+//            .receive(on: RunLoop.main) //for GCD as safety check
+            .map { passwordValue, confirmPassValue in
+                guard confirmPassValue == passwordValue, passwordValue.count > 4 else {
+                    self.passwordWarning.isHidden = false
+                    return nil
+                }
+                self.passwordWarning.isHidden = true
+                return passwordValue
+            }.eraseToAnyPublisher()
+    }
+    
+    ///This publisher will use the special type CombineLatest. The return value is a tuple with the values of password and email. This publisher wants to make sure everything is ready to submit and we'll use it to enable/disable the Register button.
+    var readyToSubmit: AnyPublisher<(String, String)?, Never> {
+        return Publishers.CombineLatest(validatedPassword, validatedEmail)
+            .map { passwordValue, emailValue in
+                guard let realPassword = passwordValue,
+                      let realEmail = emailValue
+                else {
+                    return nil
+                }
+                return (realPassword, realEmail)
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    //MARK: Subscription
+    
+    ///A set to store the subscription.
+    private var cancellableSet: Set<AnyCancellable> = []
+    
+    //MARK: - Views
+
     let emailTextField: UITextField = {
         let txt = UITextField()
         txt.translatesAutoresizingMaskIntoConstraints = false
         txt.placeholder = "Enter your email"
         txt.autocapitalizationType = .none
+        txt.addTarget(self, action: #selector(textFieldEditingDidChange(_:)), for: UIControl.Event.editingChanged)
         return txt
     }()
     
@@ -23,6 +79,7 @@ class ViewController: UIViewController {
         txt.translatesAutoresizingMaskIntoConstraints = false
         txt.placeholder = "Choose your password"
         txt.autocapitalizationType = .none
+        txt.addTarget(self, action: #selector(textFieldEditingDidChange(_:)), for: UIControl.Event.editingChanged)
         return txt
     }()
     
@@ -31,6 +88,7 @@ class ViewController: UIViewController {
         txt.translatesAutoresizingMaskIntoConstraints = false
         txt.placeholder = "Confirm your password"
         txt.autocapitalizationType = .none
+        txt.addTarget(self, action: #selector(textFieldEditingDidChange(_:)), for: UIControl.Event.editingChanged)
         return txt
     }()
     
@@ -76,6 +134,17 @@ class ViewController: UIViewController {
         self.title = "Welcome 🤓"
         setupStack()
         
+        ///Not needed anymore
+//        passwordTextField.delegate = self
+//        confirmPasswordTextField.delegate = self
+//        emailTextField.delegate = self
+        
+        ///We'll use the assign subscriber to control the isEnabled property of the Register button. We first check with map if both the password and email are not nil
+        self.readyToSubmit
+            .map { return $0 != nil }
+            .receive(on: RunLoop.main)
+            .assign(to: \.isEnabled, on: registerButton)
+            .store(in: &cancellableSet)
     }
     
     func setupStack(){
@@ -98,6 +167,22 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Register", message: "Successful", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
+    }
+}
+
+//MARK: - Extensions
+
+extension ViewController {
+    @objc func textFieldEditingDidChange(_ sender: UITextField) {
+        switch sender {
+        case emailTextField:
+            emailValue = sender.text ?? ""
+        case passwordTextField:
+            passwordValue = sender.text ?? ""
+        case confirmPasswordTextField:
+            confirmPassValue = sender.text ?? ""
+        default:
+            break
+        }
     }
 }

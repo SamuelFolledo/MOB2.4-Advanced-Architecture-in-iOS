@@ -29,5 +29,7 @@
         <page name='Day 11 - Operators'/>
         <page name='Day 11 - Operators Challenge 1'/>
         <page name='Day 11 - Operators Challenge 2'/>
+        <page name='Day 12 - Traditional URLSession'/>
+        <page name='Day 12 - Combine URLSession'/>
     </pages>
 </playground>
