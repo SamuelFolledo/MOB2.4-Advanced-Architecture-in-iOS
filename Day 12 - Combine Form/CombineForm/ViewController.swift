@@ -8,6 +8,38 @@
 import UIKit
 import Combine
 
+struct Service {
+//    static func checkIfEmail(email: String, completion: @escaping (_ error: String?) -> Void) {
+//    static func checkIfEmail(email: String, completion: @escaping (String?) -> String?) -> String? {
+//        let emails: [String] = [
+//            "samuelfolledo@gmail.com",
+//            "aaa"
+//        ]
+//        let thread = Thread {
+//            if emails.contains(email) {
+//                let errorMessage = "Email already exist"
+//                print(errorMessage)
+//                return completion(errorMessage)
+//            }
+//            return completion(nil)
+//        }
+//        thread.start()
+//    }
+    
+    static func checkIfEmail(email: String, completion: @escaping (String?) -> String?) -> String? {
+            let emails: [String] = [
+                "samuelfolledo@gmail.com",
+                "aaa"
+            ]
+            if emails.contains(email) {
+                let errorMessage = "Email already exist"
+                print(errorMessage)
+                return completion(errorMessage)
+            }
+            return completion(nil)
+        }
+}
+
 class ViewController: UIViewController {
     
     @Published var emailValue: String = ""
@@ -17,17 +49,56 @@ class ViewController: UIViewController {
     //MARK: Publishers
     
     ///This publisher will be attached to emailValue and whenever it changes it will evaluate if the text has at least 3 characters. If not, it will display the warning message. The return value will be the string with the validated email.
+//    var validatedEmail2: AnyPublisher<String?, Never> {
+//        return $emailValue.map { emailValue in
+//            guard emailValue.count > 2 else {
+//                DispatchQueue.main.async {
+//                    self.emailWarning.text = "Minimum 3 characters required"
+//                    self.emailWarning.isHidden = false
+//                }
+//                return nil
+//            }
+//            Service.checkIfEmail(email: emailValue) { (errorMessage) in
+//                if let errorMessage = errorMessage {
+//                    DispatchQueue.main.async {
+//                        self.emailWarning.text = errorMessage
+//                        self.emailWarning.isHidden = false
+////                        return nil
+//                    }
+//                }
+////                return emailValue
+//            }
+//            self.emailWarning.isHidden = true
+//            return emailValue
+//        }.eraseToAnyPublisher()
+//    }
+    
     var validatedEmail: AnyPublisher<String?, Never> {
-        return $emailValue.map { emailValue in
-            guard emailValue.count > 2 else {
-                DispatchQueue.main.async {
-                    self.emailWarning.isHidden = false
+        return $emailValue
+            .receive(on: RunLoop.main)
+            .map { emailValue in
+                guard emailValue.count > 2 else {
+                    DispatchQueue.main.async {
+                        self.emailWarning.text = "Minimum 3 characters required"
+                        self.emailWarning.isHidden = false
+                    }
+                    return nil
                 }
-                return nil
-            }
-            self.emailWarning.isHidden = true
-            return emailValue
-        }.eraseToAnyPublisher()
+                return Service.checkIfEmail(email: emailValue) { errorMessage -> String? in
+                    if let errorMessage = errorMessage {
+                        DispatchQueue.main.async {
+                            self.emailWarning.text = errorMessage
+                            self.emailWarning.isHidden = false
+                        }
+                        return nil
+                    }else{
+                        DispatchQueue.main.async {
+                            self.emailWarning.isHidden = true
+                        }
+                        return emailValue
+                    }
+                }
+            }.eraseToAnyPublisher()
     }
     
     ///This publisher will be attached to passwordValue and confirmPassValue whenever one of them changes it will evaluate if the text in both textfields match and if the password is at least 5 characters. If not, it will display the warning message. The return value will be the string with the validated password.
