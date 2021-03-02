@@ -14,12 +14,13 @@ enum APIFailureCondition: Error {
 
 struct GithubAPIUser: Decodable {
     let login: String
+//    let email: String
     let public_repos: Int
     let avatar_url: String
 }
 
 struct GithubAPI {
-   
+    
     static let networkActivityPublisher = PassthroughSubject<Bool, Never>()
     static func retrieveGithubUser(username: String) -> AnyPublisher<[GithubAPIUser], Never> {
         if username.count < 3 {
@@ -36,17 +37,17 @@ struct GithubAPI {
             })
             .tryMap { data, response -> Data in
                 guard let httpResponse = response as? HTTPURLResponse,
-                    httpResponse.statusCode == 200 else {
-                        throw APIFailureCondition.invalidServerResponse
+                      httpResponse.statusCode == 200 else {
+                    throw APIFailureCondition.invalidServerResponse
                 }
                 return data
-        }
-        .decode(type: GithubAPIUser.self, decoder: JSONDecoder())
+            }
+            .decode(type: GithubAPIUser.self, decoder: JSONDecoder())
             .map {
                 [$0]
-        }
-        .replaceError(with: [])
-        .eraseToAnyPublisher()
+            }
+            .replaceError(with: [])
+            .eraseToAnyPublisher()
         return publisher
     }
 }
