@@ -122,7 +122,7 @@ Students by the end of the course will be able to …
     - You access the publisher with the $ operator
     - Class constrained
 
-## Combine with GitHub API Demo
+#### Combine with GitHub API Demo
 <img src="https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/blob/master/static/combineGitHubDemo.gif?raw=true" width="700">
 
 ### 13. Final Exam day
