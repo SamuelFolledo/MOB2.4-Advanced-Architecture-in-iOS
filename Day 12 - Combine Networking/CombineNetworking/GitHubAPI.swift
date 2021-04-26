@@ -2,7 +2,7 @@
 //  GitHubAPI.swift
 //  CombineNetworking
 //
-//  Created by Adriana González Martínez on 2/28/21.
+//  Created by Samuel Folledo on 2/28/21.
 //
 
 import Foundation
