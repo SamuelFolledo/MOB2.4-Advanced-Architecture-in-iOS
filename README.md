@@ -34,17 +34,27 @@ Students by the end of the course will be able to …
 - [**Proxy**](https://docs.google.com/presentation/d/1XWw2Bvakedp1rGoQBvvntXVQP5R5EyXc87YbwM3f4KM/edit?usp=sharing)
 - [**Facade**](https://docs.google.com/presentation/d/1rcrC72QMSAVXnfkAhrWC_f2FbcWfK9yrmlszvmHsbuQ/edit?usp=sharing)
 
-### 5. [MVVM]()
+### 5. [MVVM](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/07-MVVM)
 
-### 6. [Coordinators]()
+### 6. [Coordinators](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/08-Coordinators)
 
-### 7. [Functional Programming part 1]()
+### 7. [Functional Programming part 1](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/09-Functional-ProgrammingPt.1)
+- Checkout [Day 7 - Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages)
+    -   Declarative Programming
 
-### 8. [Functional Programming part 2]()
+### 8. [Functional Programming part 2](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/10-Functional-ProgrammingPt.2)
+- Checkout [Day 8 - Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages)
+    - CompactMap
+    - FlatMap
+    - Map
 
 ### 9. Lab Day
 
-### 10. [Combine part 1]()
+### 10. [Combine part 1](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/Combine-Pt.1)
+- Checkout [Day 10 - Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages)
+    - Publishers
+    - Assign Subscribers
+    - Sink Subscribers
 - Publishers
 - Subscribers
     - Built-in Subscribers //18:45m
@@ -57,7 +67,12 @@ Students by the end of the course will be able to …
     - They support subscribing to a publisher, and sending results to any subscribers
     - Can be chained to process, transform data
 
-### 11. [Combine part 2]()
+### 11. [Combine part 2](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/Combine-Pt.2)
+- Checkout [Day 11 - Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages)
+    - Blackjack Card Dealer
+    - CurrentValueSubject
+    - PassThroughSubject
+    - Operators
 - Subject
     - A publisher that exposes a method for outside callers to publish elements
         - https://developer.apple.com/documentation/combine/subject
@@ -69,16 +84,17 @@ Students by the end of the course will be able to …
     - Subjects can act as a conductor to send values from non-Combine imperative code to Combine subscribers.
 
 - Built-in Subjects //24m
-    - 🚪🛎 [PassthroughSubject](https://heckj.github.io/swiftui-notes/#reference-passthroughsubject) - Let's you publish new values on demand. They will pass along values and a completion event.
+    - 🚪🛎 [PassthroughSubject](https://heckj.github.io/swiftui-notes/#reference-passthroughsubject) - Let's you publish new values on demand. They will pass along values and a completion event.
     - 🏠💡 [CurrentValueSubject](https://heckj.github.io/swiftui-notes/#reference-currentvaluesubject) - Lets you look at the current value of a publisher. 
     - [Analogy](https://stackoverflow.com/questions/60482737/what-is-passthroughsubject-currentvaluesubject)
-        - PassthroughSubject: When someone rings the door, you are notified if you are at home (you are the subscriber)
-        - CurrentValueSubject: If someone turns on the lights in your house when you are out, when you get back you'll find them turned on.
+        - **PassthroughSubject**: When someone rings the door, you are notified if you are at home (you are the subscriber)
+        - **CurrentValueSubject**: If someone turns on the lights in your house when you are out, when you get back you'll find them turned on.
 - Playground Demo
     - PassthroughSubject
     - CurrentValueSubject
 
-### 12. [Combine with UIKit]()
+### 12. [Combine with UIKit](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/Combine-Pt.3)
+- Checkout [Day 12 - Combine vs Traditional URLSession Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages)
 - [`@Published`](https://developer.apple.com/documentation/combine/published) - A type that publishes a property marked with an attribute.
 `@propertyWrapper struct Published<Value>`
     - Publishing a property with the @Published attribute creates a publisher of this type.
