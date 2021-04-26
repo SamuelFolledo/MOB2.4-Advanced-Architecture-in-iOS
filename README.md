@@ -15,6 +15,27 @@ Students by the end of the course will be able to …
 
 ## Schedule
 
+**Course Dates:** Wednesday, January 20 – Wednesday, March 3, 2021 (7 weeks)
+
+**Class Times:** Monday, Wednesday at 9:30am–12:15pm (13 class sessions)
+
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  - |  Mon, Jan 18                 | No Class - MLK Day |
+|  1 |  Wed, Jan 20              | [Creational Patterns Pt.1] & [Creational Patterns Pt.2]  |
+|  2 |  Mon, Jan 25              | [Behavioral Patterns Pt.1] & [Behavioral Patterns Pt.2]  |
+|  3 |  Wed, Jan 27              | [Structural Patterns Pt.1] |
+|  4 |  Mon, Feb 1                 | [Structural Patterns Pt.2] & Project Kick-Off|
+|  5 |  Wed, Feb 3               | [MVVM]  |
+|  6 |  Mon, Feb 8               | [Coordinators] |
+|  7 |  Wed, Feb 10              | [Functional Programming Pt.1] |
+|  8 |  Mon, Feb 15              | [Functional Programming Pt.2] |
+|  9 |  Wed, Feb 17              | Lab - Sharing Progress |
+| 10 |  Mon, Feb 22              | [Combine Pt.1] |  
+| 11 |  Wed, Feb 24              | [Combine Pt.2] |
+| 12 |  Mon, Mar 1               | [Combine Pt.3] & Review |
+| 13 |  Wed, Mar 3               | Final Exam  |
+
 ### 1. Creational Patterns [part 1](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/01-Creational-PatternsPt.1) and [part 2](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Lessons/02-Creational-PatternsPt.2) *2021/01/20*
 
 - [**Singleton Pattern** Playground](https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/tree/master/Classwork%20Playground.playground/Pages/Day%201%20-%20Singleton%20Pattern.xcplaygroundpage/Contents.swift)
@@ -101,30 +122,10 @@ Students by the end of the course will be able to …
     - You access the publisher with the $ operator
     - Class constrained
 
+## Combine with GitHub API Demo
+<img src="https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/blob/master/static/combineGitHubDemo.gif?raw=true" width="700">
+
 ### 13. Final Exam day
-
-**Course Dates:** Wednesday, January 20 – Wednesday, March 3, 2021 (7 weeks)
-
-**Class Times:** Monday, Wednesday at 9:30am–12:15pm (13 class sessions)
-
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  - |  Mon, Jan 18                 | No Class - MLK Day |
-|  1 |  Wed, Jan 20              | [Creational Patterns Pt.1] & [Creational Patterns Pt.2]  |
-|  2 |  Mon, Jan 25              | [Behavioral Patterns Pt.1] & [Behavioral Patterns Pt.2]  |
-|  3 |  Wed, Jan 27              | [Structural Patterns Pt.1] |
-|  4 |  Mon, Feb 1                 | [Structural Patterns Pt.2] & Project Kick-Off|
-|  5 |  Wed, Feb 3               | [MVVM]  |
-|  6 |  Mon, Feb 8               | [Coordinators] |
-|  7 |  Wed, Feb 10              | [Functional Programming Pt.1] |
-|  8 |  Mon, Feb 15              | [Functional Programming Pt.2] |
-|  9 |  Wed, Feb 17              | Lab - Sharing Progress |
-| 10 |  Mon, Feb 22              | [Combine Pt.1] |  
-| 11 |  Wed, Feb 24              | [Combine Pt.2] |
-| 12 |  Mon, Mar 1               | [Combine Pt.3] & Review |
-| 13 |  Wed, Mar 3               | Final Exam  |
-
-https://github.com/SamuelFolledo/MOB2.4-Advanced-Architecture-in-iOS/blob/master/static/combineGitHubDemo.gif
 
 ## Contact
 - If you have any question, feel free to contact me via email: <samuelfolledo@gmail.com>
